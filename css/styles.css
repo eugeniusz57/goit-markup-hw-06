@@ -190,7 +190,8 @@ img {
   text-transform: uppercase;
   color: var(--main-bg);
 }
-.btn {
+.btn,
+.btn-subscribe {
   min-width: 200px;
   padding: 10px 32px;
   border: none;
@@ -207,7 +208,9 @@ img {
   transition: background-color 250ms var(--cubik);
 }
 .btn:hover,
-.btn:focus {
+.btn:focus,
+.btn-subscribe:hover,
+.btn-subscribe:focus {
   background-color: var(--btn-hover-primery);
 }
 
@@ -499,10 +502,6 @@ img {
 .footer-item {
   display: block;
 }
-/* .footer-text{
-    color: var(--main-bg);
-    margin-bottom: 9px;
-} */
 
 .footer-link {
   color: var(--footer-contact);
@@ -528,26 +527,92 @@ img {
   display: flex;
 }
 
-.social-adres {
+.social-adres,
+.subscribe {
   margin-top: 12px;
   margin-left: 70px;
 }
 
-.social-adres .join {
+.social-adres .join,
+.subscribe .join {
   color: var(--main-bg);
   line-height: 1.13;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
+
 .bgr {
   background: rgba(255, 255, 255, 0.1);
 }
+
 .bgr .icon {
   fill: var(--main-bg);
 }
+
 .social-network.block {
   padding: 0;
 }
+
+.btn-subscribe{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--btn-and-accent);
+  margin-left: 12px;
+}
+
+.subscribe{
+  margin-left: 94px;
+}
+
+
+.form-footer{
+  display: flex;
+  position: relative;
+}
+
+.input-subscribe{
+padding: 15px 16px;
+width: 358px;
+height: 50px;
+border: 1px solid rgba(255, 255, 255, 0.3);
+background-color: var(--second-bg);
+  /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15)); */
+  border-radius: 4px;
+}
+
+.label-subscribe{
+  position: absolute;
+  font-size: 16px;
+  line-height: 1.25;
+  display: flex;
+  align-items: center;
+  color: var(--main-text-color);
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  transition: transform 250ms linear;
+}
+
+.input-subscribe:focus + .label-subscribe,
+.input-subscribe:not(:placeholder-shown) + .label-subscribe{
+  transform: translateY(200%);
+}
+
+.input-subscribe:focus{
+  color: var(--main-bg);
+font-size: 16px;
+line-height: 1.25;
+letter-spacing: 0.03;
+}
+
+.icon-subscribe{
+  margin-left: 10px;
+}
+
+
+
+
 /* portfolio */
 .project {
   padding: 20px 24px;
