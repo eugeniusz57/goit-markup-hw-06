@@ -401,11 +401,12 @@ color: rgba(117, 117, 117, 0.5);
 
 .checkbox-link{
   color: var(--btn-and-accent);
-  text-decoration: none;
+ 
 }
 
-.input-checkbox:focus + .label-checkbox{
-  text-shadow: 1px 7px 7px rgba(66, 68, 90, 1);
+.checkbox-link:hover,
+.checkbox-link:focus{
+  text-decoration: none;
 }
 
 .icon-form{
@@ -433,6 +434,9 @@ color: rgba(117, 117, 117, 0.5);
       border: 1px solid var(--btn-and-accent);
 }
 
+.modal-form-btn{
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
 
 /* end HERO */
 
