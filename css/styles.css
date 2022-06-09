@@ -34,6 +34,20 @@ ul {
   margin-bottom: 0px;
   /* padding-left: 0px; */
 }
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--main-bg);
@@ -221,7 +235,7 @@ img {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-
+  z-index: 99;
   opacity: 1;
   transition: opacity 250ms var(--cubik);
 }
@@ -241,7 +255,6 @@ img {
   left: 50%;
 
   width: 528px;
-  height: 581px;
   border-radius: 4px;
   background-color: var(--main-bg);
   padding: 40px;
@@ -283,15 +296,13 @@ img {
 
 }
 
-
-
 .form{
   position: relative;
 
   display: flex;
   flex-direction: column;
-color: var(--h-color-text);
-  }
+  color: var(--h-color-text);
+}
 
 .label-form{
   display: block;
@@ -343,16 +354,16 @@ color: rgba(117, 117, 117, 0.5);
 }
 
 .form-checkbox{
-position: relative;
+  position: relative;
 
-display: flex;
-margin-bottom: 30px;
-align-items: center;
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
 }
 
 .label-checkbox{
-display: inline-block;
-padding-left: 32px;
+  display: inline-block;
+  padding-left: 32px;
 }
 
 .icon-checked{
@@ -366,6 +377,7 @@ padding-left: 32px;
   height: 15px;
   border: 1px solid var(--h-color-text);
   pointer-events: none;
+    border-radius: 2px;
 
   transition: background-color 250ms var(--cubik);
 }
@@ -386,6 +398,11 @@ padding-left: 32px;
 
 .checkbox-link{
   color: var(--btn-and-accent);
+  text-decoration: none;
+}
+
+.input-checkbox:focus + .label-checkbox{
+  text-shadow: 1px 7px 7px rgba(66, 68, 90, 1);
 }
 
 .icon-form{
@@ -394,6 +411,7 @@ padding-left: 32px;
   left: 15px;
   transform: translateY(-50%);
   fill: currentColor;
+
   
   transition: fill 250ms var(--cubik);
 }
@@ -403,26 +421,22 @@ padding-left: 32px;
   background-image: url(../images/icon-check.svg);
   background-position: center;
   background-size: contain;
-  background-origin: border-box;
   background-repeat: no-repeat;
   background-color: var(--btn-and-accent);
   border-color: var(--btn-and-accent);
 }
 
+.input-checkbox:focus ~.icon-checked{
+      border: 1px solid var(--btn-and-accent);
+}
+
+.modal-form-btn:hover,
+.modal-form-btn:focus{
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
 /* end HERO */
 
-.visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
-}
 .feateres-icon {
   display: block;
   width: 100%;
